@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class target3 : MonoBehaviour
 {
+    public static bool soundclick = false;
     public GameObject closeDoor, openDoor;
     public GameObject press;
     public Text text3;
@@ -20,6 +21,7 @@ public class target3 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("character"))
         {
+            soundclick = true;
             openDoor.SetActive(false); closeDoor.SetActive(true);
             text3.gameObject .SetActive(true);
             textbg.gameObject .SetActive(true);

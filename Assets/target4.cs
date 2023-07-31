@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class target4 : MonoBehaviour
 {
+    public static bool soundclick = false;
     public GameObject closeDoor, openDoor;
     private string pass = "9:00";
     private float time = 90f;
@@ -32,6 +33,7 @@ public class target4 : MonoBehaviour
 
     private void OnMouseDown()
     {
+        soundclick = true;
         passInput.gameObject.SetActive(true);
         enter.gameObject.SetActive(true);
         counter.gameObject.SetActive(true);

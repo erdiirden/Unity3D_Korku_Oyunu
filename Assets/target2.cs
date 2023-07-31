@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class target2 : MonoBehaviour
 {
+    public static bool soundclick = false;
     public GameObject tv, sawtv;
     public GameObject closeDoor, openDoor;
     public Text text2;
@@ -20,6 +21,7 @@ public class target2 : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        soundclick = true;
         tv.SetActive(true); sawtv.SetActive(true);
         openDoor.SetActive(true); closeDoor.SetActive(false);
         text2.gameObject.SetActive(true);
