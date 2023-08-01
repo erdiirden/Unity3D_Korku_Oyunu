@@ -10,14 +10,17 @@ public class target1 : MonoBehaviour
     public Text text1;
     public Image textbg;
     private float textTime;
+    public GameObject openLightSound;
     void Start()
     {
         light4 = GameObject.Find("4").GetComponent<Light>();
         light4.intensity = 0f;
+        openLightSound.SetActive(false);
     }
     private void OnMouseDown()
     {
         light4.intensity = 0.4f;
+        openLightSound?.SetActive(true);
     }
     void Update()
     {

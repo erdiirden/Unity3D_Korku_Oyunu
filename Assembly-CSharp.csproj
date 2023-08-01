@@ -62,6 +62,7 @@
     <Compile Include="Assets\PlayerController.cs" />
     <Compile Include="Assets\target5.cs" />
     <Compile Include="Assets\sounds.cs" />
+    <Compile Include="Assets\musicSound.cs" />
     <Compile Include="Assets\lightsettings.cs" />
     <Compile Include="Assets\target3.cs" />
     <Compile Include="Assets\target1.cs" />

@@ -22,7 +22,7 @@ public class lightsettings : MonoBehaviour
     {
         if(!light1false)
         {
-            light1.intensity = 0.4f;
+            light1.intensity = 0.7f;
             light1false = true;
         }
         else

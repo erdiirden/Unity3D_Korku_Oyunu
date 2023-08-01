@@ -20,6 +20,7 @@ public class target4 : MonoBehaviour
     public Image textbg;
     private float textTime;
     private bool textOpen=false;
+    public GameObject openDoorMusic2;
     void Start()
     {
         closeDoor.SetActive(true); openDoor.SetActive(false);
@@ -29,6 +30,7 @@ public class target4 : MonoBehaviour
         text4.gameObject.SetActive(false);
         textbg.gameObject.SetActive(false);
         bgpass.gameObject.SetActive(false);
+        openDoorMusic2.SetActive(false);
     }
 
     private void OnMouseDown()
@@ -66,6 +68,10 @@ public class target4 : MonoBehaviour
         if (passUser == pass)
         {
             closeDoor.SetActive(false); openDoor.SetActive(true);
+            passInput.gameObject.SetActive(false);
+            enter.gameObject.SetActive(false);
+            bgpass.gameObject.SetActive(false);
+            openDoorMusic2.SetActive(true);
         }
     }
 }

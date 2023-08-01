@@ -4,31 +4,32 @@ using UnityEngine;
 
 public class sounds : MonoBehaviour
 {
-    AudioSource audiosource;
+    AudioSource textSound;
     public AudioClip text2, text3, text4;
     void Start()
     {
-        audiosource = GetComponent<AudioSource>();
+        textSound = GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        if(target2.soundclick==true)
+        textSound.volume = 0.4f;
+        if (target2.soundclick==true)
         {
-            audiosource.clip = text2;
-            audiosource.Play();
+            textSound.clip = text2;
+            textSound.Play();
             target2.soundclick = false;
         }
         if (target3.soundclick == true)
         {
-            audiosource.clip = text3;
-            audiosource.Play();
+            textSound.clip = text3;
+            textSound.Play();
             target3.soundclick = false;
         }
         if (target4.soundclick == true)
         {
-            audiosource.clip = text4;
-            audiosource.Play();
+            textSound.clip = text4;
+            textSound.Play();
             target4.soundclick = false;
         }
     }

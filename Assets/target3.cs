@@ -12,10 +12,12 @@ public class target3 : MonoBehaviour
     public Image textbg;
     private float textTime;
     private bool textOpen = false;
+    public GameObject closeDoorMusic;
     void Start()
     {
         text3.gameObject.SetActive(false);
         textbg.gameObject.SetActive(false);
+        closeDoor.SetActive(false);
     }
     void OnCollisionEnter(Collision collision)
     {
@@ -26,6 +28,7 @@ public class target3 : MonoBehaviour
             text3.gameObject .SetActive(true);
             textbg.gameObject .SetActive(true);
             textOpen = true;
+            closeDoorMusic.SetActive(true);
         }
     }
     void Update()
